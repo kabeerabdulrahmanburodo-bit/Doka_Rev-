@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;700;900&family=Teko:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Teko", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-black: #0A0A0A;
+  --color-brand-gray: #1A1A1A;
+  --color-brand-red: #FF2A00;
+  --color-brand-orange: #FF7300;
+}
+
+body {
+  background-color: var(--color-brand-black);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2A00;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
